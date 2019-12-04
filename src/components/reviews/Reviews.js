@@ -5,7 +5,7 @@ class Reviews extends Component {
   render() {
     return (
       <ul>
-        {this.props.reviews.map(r => <Review review={r} />)}
+        {this.props.reviews.map(r => <Review review={r} deleteReview={this.props.deleteReview} />)}
       </ul>
     );
   }
