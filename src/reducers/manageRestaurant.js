@@ -9,8 +9,8 @@ export default function manageRestaurants(state = { restaurants: [], reviews: []
           return { ...state, restaurants: [...state.restaurants, newRestaurant]}
       case 'DELETE_RESTAURANT':
         console.log('going to delete the restaurant');
-        // let filteredRestaurants = state.restaurants.filter(restaurant => restaurant.id != action.id);
-        // return { ...state, restaurants: filteredRestaurants}
+        let filteredRestaurants = state.restaurants.filter(restaurant => restaurant.id != action.id);
+        return { ...state, restaurants: filteredRestaurants}
       default:
           return state;
   }
