@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Review extends Component {
 
   handleDeleteClick = () => {
-    this.props.deleteReview(this.props.id);
+    this.props.deleteReview(this.props.review.id);
   }
 
   render() {
