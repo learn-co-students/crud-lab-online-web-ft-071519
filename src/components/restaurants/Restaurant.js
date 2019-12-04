@@ -6,11 +6,10 @@ class Restaurant extends Component {
   handleDeleteClick = () => {
     console.log('in handleDeleteClick');
     //send id to dispatch action to delete restaurant
-    this.props.deleteRestaurant(this.props.restaurant.id);
+    this.props.deleteRestaurant(this.props.id);
   }
 
   render() {
-    console.log('props', this.props)
     const { restaurant } = this.props;
 
     return (
