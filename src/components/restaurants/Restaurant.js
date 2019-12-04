@@ -5,7 +5,6 @@ class Restaurant extends Component {
 
   handleDeleteClick = () => {
     console.log('in handleDeleteClick');
-    console.log(this.props.restaurant.id)
     //send id to dispatch action to delete restaurant
     this.props.deleteRestaurant(this.props.restaurant.id);
   }
