@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 class RestaurantsContainer extends Component {
 
   render() {
+    //console.log(this.props)
     return (
       <div>
         <RestaurantInput addRestaurant={this.props.addRestaurant}/>
@@ -21,7 +22,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addRestaurant: name => dispatch({type: 'ADD_RESTAURANT', name})
+    addRestaurant: text => dispatch({type: 'ADD_RESTAURANT', text})
   }
 }
 

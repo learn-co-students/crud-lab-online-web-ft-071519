@@ -11,7 +11,7 @@ class RestaurantInput extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.addRestaurant(e.target.querySelector('input').value);
+    this.props.addRestaurant(this.state.text);
   }
 
   handleChange = e => {

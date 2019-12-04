@@ -2,12 +2,11 @@
 import cuid from 'cuid';
 export const cuidFn = cuid;
 
-export default function manageRestaurants(state = { restaurants: [] }, action) {
+export default function manageRestaurants(state = { restaurants: [], reviews: [] }, action) {
   switch(action.type){
       case 'ADD_RESTAURANT':
-          console.log('going to add a restaurant!')
-          //update state 
-          /* falls through */
+          const newRestaurant = { text: action.text, id: cuidFn() }
+          return { ...state, restaurants: [...state.restaurants, newRestaurant]}
       default:
           return state;
   }
