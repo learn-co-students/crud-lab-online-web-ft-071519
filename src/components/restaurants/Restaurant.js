@@ -3,6 +3,12 @@ import ReviewsContainer from '../../containers/ReviewsContainer'
 
 class Restaurant extends Component {
 
+  handleDeleteClick = () => {
+    console.log('in handleDeleteClick');
+    //send id to dispatch action to delete restaurant
+    this.props.deleteRestaurant(this.props.restaurant.id);
+  }
+
 
   render() {
     const { restaurant } = this.props;
@@ -11,7 +17,7 @@ class Restaurant extends Component {
       <div>
         <li>
           {restaurant.text}
-          <button> X </button>
+          <button onClick={this.handleDeleteClick}> X </button>
           <ReviewsContainer restaurant={restaurant}/>
         </li>
       </div>
